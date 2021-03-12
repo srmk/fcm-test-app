@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Push Notification - Web</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Firebase Cloude Messaging</h1>
+    Enter your title: </br><input id="title" type="text" name="title" placeholder="title"></input></br>
+    Enter your message:</br><input id="message" type="text" name="message" placeholder="message"></input></br>
+    </br>
+    </br>
+    </br>
+    <input type="button" onclick="sendMessage()" value="send message"></input>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.7/firebase-messaging.js"></script>
+    <script defer src="./init-fcm.js"></script>
+</body>
+
+</html>
