@@ -1,12 +1,12 @@
 var firebaseConfig = {
     apiKey: 'api-key',
-    authDomain: 'project-id.firebaseapp.com',
-    databaseURL: 'https://project-id.firebaseio.com',
-    projectId: 'project-id',
-    storageBucket: 'project-id.appspot.com',
-    messagingSenderId: 'sender-id',
-    appId: 'app-id',
-    measurementId: 'G-measurement-id'
+    authDomain: 'project-id.firebaseapp.com',
+    databaseURL: 'https://project-id.firebaseio.com',
+    projectId: 'project-id',
+    storageBucket: 'project-id.appspot.com',
+    messagingSenderId: 'sender-id',
+    appId: 'app-id',
+    measurementId: 'G-measurement-id'
 };
 
 // Initialize Firebase
@@ -124,6 +124,7 @@ function sendMessage() {
         body: JSON.stringify({
 
             "to": "/topics/updates",
+            // "registration_ids": ["dMAaurAAlq4IaGeL03QkR0:APA91bGZmphSbBR9jC-QRPxiPVDV877sdScoDN6pYXbCc9f5GBJIyQwFQ8SkPAFNSfH8kF4PAaXr38ZouEqsd025AD9Y6x7mPpFslb4MIdt3rC49TdIiGWz5TP6S7Lfbv2jjmahsG58d", "ca3-QDfrHlVefq2KBAWF7n:APA91bHUQB3zNx25lO85Fk-aKQTn_EAouU0Ls8YCCWwEeDYufKeTk_xdLx-ys152I71WFqABkkQlusapneLsrF2IpPwYHIf0ATuZMr0_kwc3OoVnAMbDiy7lEzjRcvyS_YsLLhUgR6WI"],
             "priority": "high",
             "data": {
                 "title": "Title of Your Notification in Title",
