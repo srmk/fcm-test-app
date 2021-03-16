@@ -80,18 +80,22 @@ function createNotification({
     icon,
     image,
     tag,
-    badge
+    badge,
+    click_action
 }) {
-    navigator.serviceWorker.ready.then(function (registration) {
-        registration.showNotification(title, {
-            body: body,
-            icon: icon,
-            vibrate: [100, 50, 100],
-            tag: tag,
-            image: image,
-            badge: badge,
-        });
-    })
+    var notification = new Notification(title, {
+        body: body,
+        icon: icon,
+        vibrate: [100, 50, 100],
+        tag: tag,
+        image: image,
+        badge: badge,
+    });
+    notification.onclick = function (event) {
+        event.preventDefault(); // prevent the browser from focusing the Notification's tab
+        window.open(click_action, '_blank');
+        notification.close();
+    }
 }
 
 function subscribeTokenToTopic(token, topic) {
